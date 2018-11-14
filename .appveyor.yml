@@ -13,7 +13,7 @@ environment:
 build: off
 
 install:
-- "%PYTHON%\\python.exe -m pip install -t requirements/dev.txt"
+- "%PYTHON%\\python.exe -m pip install -r requirements/dev.txt"
 - "%PYTHON%\\python.exe -m pip install -e ."
 
 test_script:
