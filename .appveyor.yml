@@ -6,14 +6,15 @@ environment:
   matrix:
 
   - PYTHON: "C:\\Python27-x64"
-  - PYTHON: "C:\\Python36-x64"
-  - PYTHON: "C:\\Python37-x64"
+#  - PYTHON: "C:\\Python36-x64"
+#  - PYTHON: "C:\\Python37-x64"
 
 
 build: off
 
 install:
-- "%PYTHON%\\python.exe -m pip install -e '.[dev]'"
+- "%PYTHON%\\python.exe -m pip install -t requirements/dev.txt"
+- "%PYTHON%\\python.exe -m pip install -e ."
 
 test_script:
 - "%PYTHON%\\python.exe -m pytest --cov aws_lambda_builders --cov-report term-missing --cov-fail-under 95 tests/unit tests/functional"
