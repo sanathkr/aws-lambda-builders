@@ -18,5 +18,5 @@ install:
 - "%PYTHON%\\python.exe -m pip install -e ."
 
 test_script:
-- "%PYTHON%\\python.exe -m pytest --cov aws_lambda_builders --cov-report term-missing --cov-fail-under 95 tests/unit tests/functional"
-- "%PYTHON%\\python.exe -m pytest pytest tests/integration"
+- "%PYTHON%\\python.exe -m pytest --cov aws_lambda_builders --cov-report term-missing tests/unit tests/functional"
+- "%PYTHON%\\python.exe -m pytest tests/integration"
