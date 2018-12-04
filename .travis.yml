@@ -3,18 +3,12 @@ sudo: false
 language: python
 python:
   - "2.7"
-  - "3.6"
-# Enable 3.7 without globally enabling sudo and dist: xenial for other build jobs
-matrix:
-  include:
-    - python: 3.7
-      dist: xenial
-      sudo: true
 install:
   # Install the code requirements
-  - make init
+  - nvm install 8.10.0
+  - nvm use 8.10.0
+
 script:
   # Runs unit tests
-  - make pr
-  - make test
-  - LAMBDA_BUILDERS_DEV=1 travis_wait pytest -vv tests/integration
+  - node --version
+  - npm --version
