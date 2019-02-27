@@ -7,6 +7,9 @@ CDK, SAM CLI, ElasticBeanstalk CLI can build and deploy customer's code.
 
 ## What is the problem?
 
+To use AWS Services such as Lambda, ECS, SAR, ElasticBeanstalk, AppSync etc customers need to build, compile and 
+package their source code into an artifact bundle in a format accepted by the service.
+
 ### Lambda Specific
 `aws-lambda-builders` was developed to help generate artifacts that can be deployed to Lambda. But when integrating with 
 tools like the [Cloud Development Kit (CDK) CLI](https://github.com/awslabs/aws-cdk), which covers the entire surface 
